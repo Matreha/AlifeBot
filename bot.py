@@ -62,6 +62,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "• Воскресенье в 8:00\n"
             "• Воскресенье в 20:00\n"
             "(по московскому времени)"
+            "ВНИМАНИЕ! Бот НИКОГДА не просит пароли, деньги или личные данные!\n"
+            "Он только отправляет ЖИВ? и пересылает ответы владельцу.\n"
+            "При подозрениях — пишите мне напрямую."
         )
 
 async def send_alive_check(context: ContextTypes.DEFAULT_TYPE):
