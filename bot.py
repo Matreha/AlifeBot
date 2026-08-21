@@ -18,6 +18,8 @@ USERS = [
     1061521927,  # Эмиль
     434935789,   # Я
     946107650,   # Саня Кривцов
+    227620276,   # Гладкий
+    #281925706    # Агеев 2
 ]
 
 # Словарь для отслеживания: кому мы уже отправили "ЖИВ?"
@@ -75,7 +77,7 @@ async def send_alive_check(context: ContextTypes.DEFAULT_TYPE):
 
     for user_id in USERS:
         try:
-            await context.bot.send_message(chat_id=user_id, text="ЖИВ?")
+            await context.bot.send_message(chat_id=user_id, text="Браток, очко целое? Ставь +")
             waiting_for_response[user_id] = True
             logging.info(f"Отправлено 'ЖИВ?' пользователю {user_id}")
         except Exception as e:
