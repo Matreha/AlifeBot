@@ -7,8 +7,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 
 # --- НАСТРОЙКИ ---
 # Берем из переменных окружения для безопасности
-BOT_TOKEN = os.getenv("BOT_TOKEN", "1371320501:AAFs5STeYd1pQZ_W1D0vNWOZo7PXT8xV-ds")
-OWNER_CHAT_ID = int(os.getenv("OWNER_CHAT_ID", 434935789))
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OWNER_CHAT_ID = int(os.getenv("OWNER_CHAT_ID", 0))
 
 # Московское время
 MOSCOW_TZ = pytz.timezone('Europe/Moscow')
