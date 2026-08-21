@@ -47,9 +47,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "Привет! Я буду проверять, жив ли ты. 😊\n"
             "Расписание:\n"
-            "• Суббота в 20:00\n"
-            "• Воскресенье в 8:00\n"
-            "• Воскресенье в 20:00\n"
+            "• Суббота в 19:40\n"
+            "• Воскресенье в 7:40\n"
+            "• Воскресенье в 19:40\n"
             "(по московскому времени)\n\n"
             "🔧 Панель управления:",
             reply_markup=reply_markup
@@ -58,9 +58,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "Привет! Я буду проверять, жив ли ты. 😊\n"
             "Расписание:\n"
-            "• Суббота в 20:00\n"
-            "• Воскресенье в 8:00\n"
-            "• Воскресенье в 20:00\n"
+            "• Суббота в 19:40\n"
+            "• Воскресенье в 7:40\n"
+            "• Воскресенье в 19:40\n"
             "(по московскому времени)"
             "ВНИМАНИЕ! Бот НИКОГДА не просит пароли, деньги или личные данные!\n"
             "Он только отправляет ЖИВ? и пересылает ответы владельцу.\n"
@@ -179,26 +179,26 @@ async def setup_jobs(application):
     # Суббота в 20:00
     job_queue.run_daily(
         send_alive_check,
-        time=time(hour=20, minute=0, tzinfo=MOSCOW_TZ),
+        time=time(hour=19, minute=40, tzinfo=MOSCOW_TZ),
         days=(5,)
     )
-    logging.info("Запланирована проверка на субботу 20:00 МСК")
+    logging.info("Запланирована проверка на субботу 19:40 МСК")
 
     # Воскресенье в 8:00
     job_queue.run_daily(
         send_alive_check,
-        time=time(hour=8, minute=0, tzinfo=MOSCOW_TZ),
+        time=time(hour=7, minute=40, tzinfo=MOSCOW_TZ),
         days=(6,)
     )
-    logging.info("Запланирована проверка на воскресенье 8:00 МСК")
+    logging.info("Запланирована проверка на воскресенье 7:40 МСК")
 
     # Воскресенье в 20:00
     job_queue.run_daily(
         send_alive_check,
-        time=time(hour=20, minute=0, tzinfo=MOSCOW_TZ),
+        time=time(hour=19, minute=40, tzinfo=MOSCOW_TZ),
         days=(6,)
     )
-    logging.info("Запланирована проверка на воскресенье 20:00 МСК")
+    logging.info("Запланирована проверка на воскресенье 19:40 МСК")
 
 # --- ЗАПУСК БОТА ---
 
@@ -220,9 +220,9 @@ def main():
     # Запускаем бота
     logging.info("Бот запущен!")
     logging.info("Расписание:")
-    logging.info("  • Суббота 20:00 МСК")
-    logging.info("  • Воскресенье 8:00 МСК")
-    logging.info("  • Воскресенье 20:00 МСК")
+    logging.info("  • Суббота 19:40 МСК")
+    logging.info("  • Воскресенье 7:40 МСК")
+    logging.info("  • Воскресенье 19:40 МСК")
 
     application.run_polling()  # ← ЭТО ПОСЛЕДНЯЯ КОМАНДА
 
